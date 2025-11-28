@@ -1,5 +1,6 @@
 {
   "name": "safeeval",
+  "description": "Run shell scripts from remote endpoints with confidence",
   "module": "src/index.ts",
   "type": "module",
   "private": true,
