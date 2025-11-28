@@ -9,13 +9,13 @@ Evaluate shell scripts safely using AI-powered analysis before execution
 Install globally using npm:
 
 ```bash
-npm install -g safeeval
+npm install -g safeeval-sh
 ```
 
 Or using Bun:
 
 ```bash
-bun install -g safeeval
+bun install -g safeeval-sh
 ```
 
 ## Usage
