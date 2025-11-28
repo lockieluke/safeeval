@@ -1,5 +1,6 @@
+#!/usr/bin/env bun
 import { addCleanupListener } from "async-cleanup";
-import { $, stdout } from "bun";
+import { $ } from "bun";
 import chalk from "chalk";
 import * as fs from "fs-extra";
 import isUrl from "is-url";
@@ -64,6 +65,11 @@ if (!fileType.startsWith("text/x-shellscript")) {
 spinner.success("Downloaded script");
 
 if (!values["skip-analysis"]) {
+  if (!process.env.OPENROUTER_API_KEY && !process.env.OPENROUTER_API_BASE) {
+    console.error(chalk.red("Error: OPENROUTER_API_KEY or OPENROUTER_API_BASE environment variable is not set. Security analysis cannot be performed without it."));
+    await cleanup(1);
+  }
+
   spinner = yoctoSpinner({
     text: "Analysing script"
   }).start();
