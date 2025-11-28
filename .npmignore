@@ -1,0 +1,45 @@
+# Development files
+*.log
+*.tsbuildinfo
+.env
+.env.*
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+out/
+coverage/
+
+# Dependencies
+node_modules/
+
+# Git
+.git
+.gitignore
+
+# Test files
+*.test.ts
+*.spec.ts
+__tests__/
+
+# Documentation
+docs/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Misc
+tsconfig.json
+bun.lock
+
+# Marketing
+assets/launch.gif

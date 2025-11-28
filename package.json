@@ -1,9 +1,36 @@
 {
   "name": "safeeval",
+  "version": "1.0.0",
   "description": "Run shell scripts from remote endpoints with confidence",
   "module": "src/index.ts",
   "type": "module",
-  "private": true,
+  "bin": {
+    "safeeval": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "patches",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "shell",
+    "script",
+    "security",
+    "analysis",
+    "cli",
+    "safeeval"
+  ],
+  "author": "lockieluke",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lockieluke/safeeval.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lockieluke/safeeval/issues"
+  },
+  "homepage": "https://github.com/lockieluke/safeeval#readme",
   "scripts": {
     "start": "bun run src/index.ts",
     "build-exe": "bun build src/index.ts --compile --minify --sourcemap --outfile dist/safeeval"
